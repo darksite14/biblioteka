@@ -7,7 +7,7 @@
 var KTDatatablesDataSourceAjaxServer = function() {
 
 	var initTable1 = function() {
-		var table = $('#kt_datatable');
+		var table = $('#books');
 
 		// begin first table
 		table.DataTable({
@@ -18,13 +18,6 @@ var KTDatatablesDataSourceAjaxServer = function() {
 			ajax: {
 				url: HOST_URL + '/api/datatables/demos/server.php',
 				type: 'POST',
-				data: {
-					// parameters for custom backend script demo
-					columnsDef: [
-						'OrderID', 'Country',
-						'ShipAddress', 'CompanyName', 'ShipDate',
-						'Status', 'Type', 'Actions'],
-				},
 			},
 			columns: [
 				{data: 'OrderID'},
